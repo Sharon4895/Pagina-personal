@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sharon — Presentación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Sharon</h1>
+        <nav class="nav" id="main-nav" aria-label="Navegación principal">
+          <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+          <a href="#about">Sobre mí</a>
+          <a href="#skills">Habilidades</a>
+          <a href="#projects">Proyectos</a>
+          <a href="#contact">Contacto</a>
+          <button id="theme-toggle" aria-label="Cambiar tema">🌓</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h2>Hola, soy <span class="name">Sharon</span></h2>
+            <p class="lead">Desarrollador web / Estudiante de ingeniería / Entusiasta del desarrollo web y diseño.</p>
+            <p>Me especializo en crear experiencias web limpias, accesibles y responsivas. Actualmente estudio y trabajo en proyectos escolares relacionados con aplicaciones web y diseño.</p>
+            <p class="cta-row">
+              <a class="btn" href="#contact">Contactarme</a>
+              <a class="btn ghost" href="#projects">Ver proyectos</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h3>Sobre mí</h3>
+        <p>Soy estudiante de sexto semestre con interés en criptografía, desarrollo web y buenas prácticas de accesibilidad. Me gusta aprender nuevas tecnologías y construir proyectos que sean útiles y seguros.</p>
+      </section>
+
+      <section id="skills" class="container skills">
+        <h3>Habilidades</h3>
+        <ul class="skill-list">
+          <li>HTML &amp; CSS (Responsive, Flexbox, Grid)</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Git / GitHub / GitLab</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="container projects">
+        <h3>Proyectos</h3>
+        <div class="project-grid">
+          <article class="project-card">
+            <h4>Sistema de gestión de expedientes personales</h4>
+            <p>Creación de una aplicación web para la gestión de expedientes personales, utilizando tecnologías como HTML, CSS y JavaScript, haciendo uso del framework Angular 17</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h3>Contacto</h3>
+        <p>¿Quieres trabajar conmigo o preguntar por algo? Envíame un correo:</p>
+        <p><a href="mailto:lesharon.nr@gmail.com">lesharon.nr@gmail.com</a></p>
+        <p>O sígueme en: <a href="https://github.com/Sharon4895">GitHub</a> · <a href="https://linkedin.com/in/sharon-leonardo-najera-ramirez-444b072ab">LinkedIn</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Sharon — Sitio personal</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
