@@ -26,19 +26,38 @@ document.addEventListener('DOMContentLoaded', function(){
   const nav = document.getElementById('main-nav');
   const navToggle = document.getElementById('nav-toggle');
   if(nav && navToggle){
+    const TRANS_MS = 200; // match CSS transition duration
+
+    function openNav(){
+      nav.classList.add('open');
+      // allow layout then show for transition
+      requestAnimationFrame(()=>{
+        nav.classList.add('show');
+      });
+      navToggle.setAttribute('aria-expanded','true');
+      navToggle.setAttribute('aria-label','Cerrar menú');
+    }
+
+    function closeNav(){
+      nav.classList.remove('show');
+      navToggle.setAttribute('aria-expanded','false');
+      navToggle.setAttribute('aria-label','Abrir menú');
+      // wait for transition then remove open
+      setTimeout(()=>{
+        nav.classList.remove('open');
+      }, TRANS_MS + 20);
+    }
+
     navToggle.addEventListener('click', ()=>{
-      const opened = nav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
-      navToggle.setAttribute('aria-label', opened ? 'Cerrar menú' : 'Abrir menú');
+      const isOpen = nav.classList.contains('open');
+      if(isOpen) closeNav(); else openNav();
     });
 
     // Close mobile menu when a nav link is clicked
     nav.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', ()=>{
         if(nav.classList.contains('open')){
-          nav.classList.remove('open');
-          navToggle.setAttribute('aria-expanded','false');
-          navToggle.setAttribute('aria-label','Abrir menú');
+          closeNav();
         }
       });
     });
@@ -46,9 +65,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // Close on resize to large screens
     window.addEventListener('resize', ()=>{
       if(window.innerWidth > 900 && nav.classList.contains('open')){
-        nav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded','false');
-        navToggle.setAttribute('aria-label','Abrir menú');
+        closeNav();
       }
     });
   }
