@@ -1,98 +1,125 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sharon</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <nav class="nav" id="main-nav" aria-label="Navegación principal">
-          <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú">☰</button>
-          <a href="#about">Sobre mí</a>
-          <a href="#skills">Habilidades</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sharon Leonardo | Ingeniera en Sistemas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Sharon<span class="name">.dev</span></div>
+      <nav class="nav" id="main-nav">
+        <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">☰</button>
+        <div class="nav-links">
+          <a href="#about">Perfil</a>
           <a href="#projects">Proyectos</a>
+          <a href="#skills">Habilidades</a>
           <a href="#contact">Contacto</a>
-          <button id="theme-toggle" type="button" aria-label="Cambiar tema">🌓</button>
-        </nav>
-      </div>
-    </header>
+        </div>
+        <button id="theme-toggle" type="button" aria-label="Cambiar tema">🌓</button>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-text">
-            <h2>Hola, soy <span class="name">Sharon</span></h2>
-            <p class="lead">Desarrollador web / Estudiante de ingeniería / Entusiasta del desarrollo web y diseño.</p>
-            <p>Me especializo en crear experiencias web limpias, accesibles y responsivas. Actualmente estudio y trabajo en proyectos escolares relacionados con aplicaciones web y diseño.</p>
-            <p class="cta-row">
-              <a class="btn" href="#contact">Contactarme</a>
-              <a class="btn ghost" href="#projects">Ver proyectos</a>
-            </p>
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="photo-frame">
+          <img src="assets/yo.jpeg" alt="Sharon Leonardo Najera Ramírez" />
+        </div>
+        <div class="hero-text">
+          <h2>Hola, soy <span class="name">Sharon Leonardo</span></h2>
+          <p class="lead">Ingeniero en Sistemas Computacionales | ESCOM - IPN</p>
+          <p>Desarrollador <strong>FullStack</strong> con experiencia en arquitecturas escalables, bases de datos y sistemas operativos. Lidero proyectos bajo metodologías <strong>SCRUM</strong> buscando siempre soluciones de código limpio y eficiente.</p>
+          <div class="cta-row">
+            <a class="btn pulse" href="#contact">Contactarme</a>
+            <a class="btn ghost" href="#cv">Descargar CV</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="about" class="container about">
-        <h3>Sobre mí</h3>
-        <p>Soy estudiante de sexto semestre con interés en criptografía, desarrollo web y buenas prácticas de accesibilidad. Me gusta aprender nuevas tecnologías y construir proyectos que sean útiles y seguros.</p>
-      </section>
+    <section id="about" class="card">
+      <h3>Perfil Profesional</h3>
+      <p>Estudiante de último año en la <strong>Escuela Superior de Cómputo (ESCOM)</strong>. Cuento con habilidades sólidas en la integración de hardware y software, dominio del ecosistema <strong>Linux</strong> (Debian/Pop!_OS) y capacidad de liderazgo técnico en entornos ágiles. Poseo un nivel de inglés intermedio (B2) especializado en comprensión técnica.</p>
+    </section>
 
-      <section id="skills" class="container skills">
-        <h3>Habilidades</h3>
-        <ul class="skill-list">
-          <li>HTML y CSS (Responsive, Flexbox, Grid)</li>
-          <li>JavaScript (ES6+)</li>
-          <li>Git / GitHub / GitLab</li>
-        </ul>
-      </section>
+    <section id="projects" class="card">
+      <h3>Proyectos Destacados</h3>
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="badge">Proyecto de Tesis</span>
+          <h4>Cocone: Gestión de Expedientes</h4>
+          <p>Sistema digital seguro para la gestión de casos legales de impacto social. Desarrollado con <strong>Angular 17</strong>, Django y PostgreSQL, incluyendo un sistema robusto de control de acceso (RBAC).</p>
+        </article>
+        
+        <article class="project-card">
+          <span class="badge">Cloud & Java</span>
+          <h4>Sistema Financiero Distribuido</h4>
+          <p>Aplicación financiera escalable desplegada en <strong>Google Cloud Platform</strong>. Implementé el backend en Java para transacciones distribuidas y una interfaz reactiva en Angular.</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="projects" class="container projects">
-        <h3>Proyectos</h3>
-        <div class="project-grid">
-          <article class="project-card">
-            <h4>Sistema de gestión de expedientes personales</h4>
-            <p>Creación de una aplicación web para la gestión de expedientes personales, utilizando tecnologías como HTML, CSS y JavaScript, haciendo uso del framework Angular 17</p>
-          </article>
+    <section id="skills" class="card">
+      <h3>Habilidades Técnicas</h3>
+      <div class="skill-groups">
+        <div class="group">
+          <strong>Lenguajes:</strong>
+          <ul class="skill-list">
+            <li>Java</li>
+            <li>C</li>
+            <li>Python</li>
+            <li>TypeScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="group">
+          <strong>Tecnologías:</strong>
+          <ul class="skill-list">
+            <li>Angular 17+</li>
+            <li>Django REST</li>
+            <li>Docker</li>
+            <li>GCP</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="dual-grid">
+      <section id="cv" class="card">
+        <h3>Trayectoria</h3>
+        <p>¿Buscas más detalles? Descarga mi CV completo o mi llave pública para contacto seguro.</p>
+        <div class="cta-row">
+          <a class="btn" href="assets/cv.pdf" download>Descargar CV (PDF)</a>
+          <a class="btn ghost" href="assets/public_key.pem" download>Llave PEM</a>
         </div>
       </section>
 
-      <section id="cv" class="container cv-section">
-        <h3>Descargar mi CV</h3>
-        <p>Puedes descargar mi currículum en formato PDF.</p>
-        <p>
-          <a class="btn" href="https://sharon4895.github.io/Pagina-personal/assets/cv.pdf" download>Descargar CV (PDF)</a>
-          <a class="btn" href="mailto:lesharon.nr@gmail.com" target="_blank">Pedir CV por correo</a>
-        </p>
+      <section id="contact" class="card">
+        <h3>Contacto Directo</h3>
+        <ul class="contact-info">
+          <li>📍 Azcapotzalco, CDMX</li>
+          <li>📧 <a href="mailto:lesharon.nr@gmail.com">lesharon.nr@gmail.com</a></li>
+          <li>📱 556 491 8148</li>
+          <li>🔗 <a href="https://linkedin.com/in/sharon-leonardo" target="_blank">LinkedIn</a></li>
+        </ul>
       </section>
+    </div>
+  </main>
 
-      <section id="cv" class="container cv-section">
-        <h3>Llave publica</h3>
-        <p>Puedes descargar mi llave en formato PEM.</p>
-        <p>
-          <a class="btn" href="https://sharon4895.github.io/Pagina-personal/assets/public_key.pem" download>Descargar clave pública (PEM)</a>
-        </p>
-      </section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sharon Leonardo Najera Ramírez — ESCOM IPN</p>
+    </div>
+  </footer>
 
-      <section id="contact" class="container contact">
-        <h3>Contacto</h3>
-        <p>¿Quieres trabajar conmigo o preguntar por algo? Envíame un correo:</p>
-        <p><a href="mailto:lesharon.nr@gmail.com">lesharon.nr@gmail.com</a></p>
-        <p>O sígueme en: <a href="https://github.com/Sharon4895" target="_blank">GitHub</a> · <a href="https://linkedin.com/in/sharon-leonardo-najera-ramirez-444b072ab" target="_blank">LinkedIn</a></p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Sharon — Sitio personal</p>
-      </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-  </body>
+  <script src="js/script.js"></script>
+</body>
 </html>
