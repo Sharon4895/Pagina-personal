@@ -6,21 +6,19 @@
   --text: #1a2236;
   --muted: #6b7280;
   --accent: #0066ff;
+  --link-color: #0056d2; /* Azul para modo claro */
   --card: #fff;
-  --radius: 18px;
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 8px 32px rgba(0, 102, 255, 0.12);
-  --transition: all 0.3s ease;
+  /* ... resto de variables ... */
 }
 
 [data-theme="dark"] {
   --bg: #181f2a;
   --text: #e6eef8;
   --muted: #9aa7b8;
-  --accent: #59a6ff;
+  --accent: #59a6ff; /* Azul claro vibrante */
+  --link-color: #74b9ff; /* Azul mucho más legible para el fondo oscuro */
   --card: #232b3e;
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
-  --shadow-hover: 0 8px 32px rgba(89, 166, 255, 0.18);
+  /* ... resto de variables ... */
 }
 
 /* =========================================
@@ -343,4 +341,73 @@ body {
   .hero-text h2 {
     font-size: 1.6rem;
   }
+}
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Botones sociales específicos */
+.social-grid a {
+  color: var(--link-color);
+}
+
+.social-grid a:hover {
+  color: #fff;
+}
+
+/* Asegurar que los botones no cambien de color de texto si no es necesario */
+.btn, .btn-sm {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.btn.ghost {
+  color: var(--accent) !important;
+}
+/* Contenedor principal de los hobbies */
+.hobby-grid {
+  display: grid;
+  /* El auto-fit permite que los elementos se acomoden solos según el espacio */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+/* Estilo para cada tarjeta de hobby */
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Magia para que las imágenes se adapten */
+.hobby-item img {
+  width: 100%;           /* Ocupa todo el ancho de su contenedor */
+  max-width: 100%;       /* Evita que se estire más allá de su tamaño real */
+  height: auto;          /* Mantiene la proporción original */
+  aspect-ratio: 3 / 2;   /* Obliga a todas las imágenes a tener la misma forma */
+  object-fit: cover;     /* Recorta el exceso para llenar el espacio sin deformarse */
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+/* Efecto visual al pasar el mouse */
+.hobby-item img:hover {
+  transform: scale(1.03);
+}
+
+/* Ajuste para los videos para que también sean responsivos */
+.video-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  height: auto;
 }
